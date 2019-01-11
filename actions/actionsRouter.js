@@ -5,18 +5,37 @@ const actiondb = require("../data/helpers/actionModel.js");
 
 // Action Routes
 router.get("/", (req, res) => {
-  const action = req.params.posts;
   actiondb
     .get()
     .then(action => {
-      if (action) {
-        res.status(200).json(action);
-      } else {
-        res.status(404).json({ message: "The action could not be retrieved." });
-      }
+      res.status(200).json(action);
     })
     .catch(err => {
-      res.json(err);
+      res.status(500).json({ message: "The action could not be retrieved" });
+    });
+});
+
+router.get("/:id", (req, res) => {
+  const { id } = req.params;
+  actiondb
+    .get(id)
+    .then(action => {
+      if (!action) {
+        res.status(404).json({
+          message: `There is no action with that specified Id ${id}.`
+        });
+      } else {
+        res.status(200).json(action);
+      }
+    })
+    .catch(action => {
+      if (action) {
+        res.status(404).json({ error: `There is no action with the Id ${id}` });
+      } else {
+        res
+          .status(500)
+          .json({ error: `Could not retrieve action with specified Id ${id}` });
+      }
     });
 });
 
