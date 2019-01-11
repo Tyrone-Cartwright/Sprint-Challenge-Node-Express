@@ -25,10 +25,10 @@ In this challenge, create a web API around the following resources: `Projects` a
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Mention two parts of Express that you learned about this week.
-      I learned about Routing that deal with the url that the user visits and middleware- that manages requests and responses.
+      I learned about Routing A way to select which request handler function is executed based on the URL visited and the HTTP method used and middleware- Functions that get the request and response objects and can operate on them and either return the response or call the next middleware in the pipeline.
 
 - [ ] Describe Middleware?
-      Its a func that gets requests and response objects that will either return the response or move to the next middleware
+      Functions that get the request and response objects and can operate on them and either return the response or call the next middleware in the pipeline
 
 - [ ] Describe a Resource?
       Ressource is accessed by the URL being supplied, usuallya JSON object
