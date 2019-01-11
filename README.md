@@ -25,14 +25,19 @@ In this challenge, create a web API around the following resources: `Projects` a
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Mention two parts of Express that you learned about this week.
+      I learned about Routing that deal with the url that the user visits and middleware- that manages requests and responses.
 
 - [ ] Describe Middleware?
+      Its a func that gets requests and response objects that will either return the response or move to the next middleware
 
 - [ ] Describe a Resource?
+      Ressource is accessed by the URL being supplied, usuallya JSON object
 
 - [ ] What can the API return to help clients know if a request was successful?
+      A status code and a JSON object with the code ususally(200)
 
 - [ ] How can we partition our application into sub-applications?
+      Routers do this by serving our application and routing our API with middleware and routing.
 
 ## Project Setup
 
@@ -44,12 +49,12 @@ Follow these steps to set up and work on your project:
 - [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [ ] Implement the project on this Branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
- 
+
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request.**
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request.**
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [ ] PM then will count the HW as done by merging the branch back into master.
 
 ## Database Persistence Helpers
 
@@ -65,6 +70,7 @@ The `/data/helpers` folder includes helper files that you can use to manage the 
 The `projectModel.js` helper includes an extra method called `getProjectActions()` that takes a _project id_ as it's only argument and returns a list of all the _actions_ for the _project_.
 
 **All these helper methods return a promise.**
+
 **Use _Postman_ to test the API as you work through the exercises.**
 
 ## Minimum Viable Product
